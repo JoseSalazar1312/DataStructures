@@ -12,6 +12,7 @@ public class Array {
             System.out.println("\n=== MENÚ ===");
             System.out.println("1. Ingresar y mostrar números");
             System.out.println("2. Par o impar");
+            System.out.println("3. Invertir array");
             System.out.println("4. Salir");
             System.out.print("Elige una opción: ");
             opcion = entrada.nextInt();
@@ -22,6 +23,9 @@ public class Array {
                     break;
                 case 2:
                     parOImpar(entrada);
+                    break;
+                case 3:
+                    invertirArray(entrada);
                     break;
                 case 4:
                     System.out.println("Saliendo del programa...");
@@ -66,7 +70,25 @@ public class Array {
             }else {
                 System.out.println(paroimpar[c] + " Impar");
             }
+        }
+    }
 
+    //Invertir arreglos
+    public static void invertirArray(Scanner entrada){
+        int [] arregloUno = new int[8];
+        for (int c = 0 ; c < 8; c++){
+            System.out.println("Ingresa el numero " + c + ": " );
+            arregloUno[c] = entrada.nextInt();
+        }
+
+        for (int c = 7 ; c >= 0 ; c--){
+            System.out.println("Array Invertido");
+            System.out.println(arregloUno[c]);
+        }
+
+        int arregloUnoInvertido[] = new int[arregloUno.length];
+
+        for (int i = arregloUnoInvertido.length - 1, j = 0; i >= 0; j++){
 
         }
 
